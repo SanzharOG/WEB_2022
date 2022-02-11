@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+    }
+    
+    body {
+        background-color: #fafafa;
+    }
+    
+    select {
+        padding: 10px;
+        border: none;
+        margin: 0 10px 0 0;
+        color: grey;
+    }
+    
+    input {
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: rgb(248, 246, 246);
+    }
+    
+    input[type='text'] {
+        margin-bottom: 0.5rem;
+    }
+    
+    .login-box,
+    input,
+    hr,
+    .sign-up-box {
+        border: 1px solid rgb(223, 223, 223);
+    }
+    
+    hr {
+        width: 100px;
+    }
+    
+    .main-box {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .fb-login-box,
+    .sign-up-box,
+    .footer-box,
+    .forgot-pass-box {
+        text-align: center;
+        margin-top: 5%;
+    }
+    
+    .div-box,
+    .fb-login-box {
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+    
+    .left-image-box {
+        margin-left: 0%;
+    }
+    
+    .insta-brand-img {
+        width: 430px;
+    }
+    
+    .logo-box {
+        text-align: center;
+    }
+    
+    .fb-text,
+    .sign-up-box a,
+    .forgot-pass-box a,
+    .footer-1 a,
+    .footer-2 a,
+    .footer-3 a {
+        text-decoration: none;
+    }
+    .lang-selector{
+        width: 90px;
+    }
+    #sign-up-button {
+        font-weight: bold;
+        font-size: 13px;
+        color: rgb(57, 201, 201);
+    }
+    
+    .right-box {
+        margin-bottom: 10px;
+        margin-left: 1%;
+        width: 350px;
+    }
+    
+    .login-box {
+        padding: 2rem;
+        margin: 7rem 0 1rem;
+        background-color: white;
+    }
+    
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+    
+    .button-login {
+        background-color: #3095f3;
+        color: white;
+        padding: 0.3rem;
+        border: none;
+        width: 100%;
+        border-radius: 3px;
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+    
+    .div-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .fb-text,
+    .forgot-pass-box a {
+        font-size: 13px;
+        color: #3d5a98;
+    }
+
+    .facebook{
+        display: flex;
+        position: absolute;
+        margin-left: 59px;
+    }
+
+    .type-of-app-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+    }
+    
+    .div-text-block P {
+        color: rgb(104, 104, 104);
+    }
+    
+    .sign-up-box {
+        background-color: white;
+        padding: 8px;
+    }
+    
+    .app-box p {
+        text-align: center;
+    }
+    
+    .type-of-app-box>img {
+        height: 40px;
+        margin: 0 10px 0 0;
+    }
+    
+    .footer-box {
+        color: grey;
+        margin: 5% 0;
+    }
+    
+    .footer-1 a,
+    .footer-2 a,
+    .footer-3 a {
+        color: grey;
+        margin: 1rem 1rem 1rem 0;
+    }
+    
+    .footer-1,
+    .footer-2,
+    .footer-3 {
+        margin-bottom: 0.5%;
+        font-weight: lighter;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+
+</head>
+
+<body>
+    <main>
+        <div class="main-box">
+            <div class="left-image-box">
+                <img class="insta-brand-img" src="smartphones.png" alt="Instagram on smartphone">
+            </div>
+            <div class="right-box">
+                <div class="login-box">
+                    <div class="logo-box">
+                        <img id="inst-logo" src="logo.png" alt="Instagram text logo" width="180px">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Phone number, username, or email">
+                        <input type="password" placeholder="Password">
+                        <button class="button-login" disabled="disabled">Log In</button>
+                    </div>
+                    <div class="div-box">
+                        <div class="border-box">
+                            <hr>
+                        </div>
+                        <div class="div-text-block">
+                            <p><strong>OR</strong></p>
+                        </div>
+                        <div class="border-box">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="fb-login-box">
+                        <img class="facebook"src="https://image.flaticon.com/icons/png/512/124/124010.png" width="16px" height="16px">
+                        <a href="https://www.facebook.com/" class="fb-text" style="font-weight: bold">Log in with Facebook</a>
+                    </div>
+                    <div class="forgot-pass-box">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-box">
+                    <p>Don't have an account?
+                        <a id="sign-up-button" href=" # " style="font-weight: bold ">Sign up</a></p>
+                </div>
+                <div class=" app-box ">
+                    <p>Get the app.</p>
+                    <div class="type-of-app-box ">
+                        <img src="appstore.png " alt="App store logo ">
+                        <img src="googleolay.png " alt="Google play logo ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box ">
+            <div class="footer-1 ">
+                <a href="# ">Meta</a>
+                <a href="# ">About</a>
+                <a href="# ">Blog</a>
+                <a href="# ">Jobs</a>
+                <a href="# ">Help</a>
+                <a href="# ">API</a>
+                <a href="# ">Privacy</a>
+                <a href="# ">Terms</a>
+                <a href="# ">Top Accounts</a>
+                <a href="# ">Hashtags</a>
+                <a href="# ">Locations</a>
+                <a href="# ">Instagram Lite</a>
+            </div>
+            <div class="footer-2 ">
+                <a href="# ">Beauty</a>
+                <a href="# ">Dance</a>
+                <a href="# ">Fitness</a>
+                <a href="# ">Food & Drink</a>
+                <a href="# ">Home & Garden</a>
+                <a href="# ">Music</a>
+                <a href="# ">Visual Arts</a>
+            </div>
+            <div class="footer-3 ">
+                <select class="lang-selector " data-placeholder="Choose a Language... " style="margin-left:0% ">
+                    <option value="af">Afrikaans</option>
+                    <option value="cs">Čeština</option>
+                    <option value="da">Dansk</option>
+                    <option value="de">Deutsch</option>
+                    <option value="el">Ελληνικά</option>
+                    <option value="en" selected>English</option>
+                    <option value="en-gb">English (UK)</option>
+                    <option value="es">Español (España)</option>
+                    <option value="es-la">Español</option>
+                    <option value="fi">Suomi</option>
+                    <option value="fr">Français</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="it">Italiano</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="nb">Norsk</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
+                    <option value="pt-br">Português (Brasil)</option>
+                    <option value="pt">Português (Portugal)</option>
+                    <option value="ru">Русский</option>
+                    <option value="sv">Svenska</option>
+                    <option value="th">ภาษาไทย</option>
+                    <option value="tl">Filipino</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="zh-cn">中文(简体)</option>
+                    <option value="zh-tw">中文(台灣)</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="gu">ગુજરાતી</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="hr">Hrvatski</option>
+                    <option value="hu">Magyar</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="mr">मराठी</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="pa">ਪੰਜਾਬੀ</option>
+                    <option value="si">සිංහල</option>
+                    <option value="sk">Slovenčina</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="zh-hk">中文(香港)</option>
+                    <option value="bg">Български</option>
+                    <option value="fr-ca">Français (Canada)</option>
+                    <option value="ro">Română</option>
+                    <option value="sr">Српски</option>
+                    <option value="uk">Українська</option>
+                </select>
+                <span>&copy 2022 Instagram from Meta</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

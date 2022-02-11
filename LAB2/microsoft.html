@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Microsft</title>
+    <link rel="icon" href="logo.png" id="logo img">
+</head>
+<style>
+    body{
+        background-color: white;
+        font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        margin: 0;
+    }
+    .menu,.rightMenu{
+        display: flex;
+        align-items: center;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    ul{
+        list-style-type:none;	
+        padding: 0;
+    }
+    #logo img {
+        height: 80px;
+        max-height: 80px;
+        width: auto;
+    }
+    .container{
+        width: 1220px;
+        margin: auto;
+    }
+    header .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo{
+        height: 22px;
+    }
+    #signin{
+        width: 32px;
+        height: 32px;
+        display: block;
+    }
+    header ul{
+        
+        display:  flex;
+        margin: 10px 0;
+    }
+    header ul li{
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    header ul li a{
+        display: block;
+        margin-top: auto;
+    
+    }
+    
+    .main-card{
+        position: relative;
+    }
+    .main-card img{
+        width: 100%;
+    }
+    .main-card .content{
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        width: 400px;
+    }
+    .main-card h1{
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+    }
+    .main-card p{
+        margin-bottom: 32px;
+        color: #fff;
+    }
+    .mainBtn{
+        background-color: white;
+        color:black ;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 20px;
+        margin-right: 24px;
+    }
+    
+    .cards{
+        margin: 40px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card{
+        width: 280px;
+    }
+    .cardImg{
+        width: 100%;
+    }
+    .cardHeading{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom:0;
+    }
+    .cardText{
+        margin: 10px 0;
+    }
+    .cardBtn{
+        margin: 10px 0;
+        color: rgb(0,103,184);
+        font-weight: 600;
+    }
+    
+    footer{
+        background-color: rgb(242,242,242);
+        color: rgb(97,97,97);
+    }
+    .footer-menu{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 12px;
+    }
+    .footer-menu li{
+        padding: 6px 0;
+    }
+    .ulHead{
+        font-size: 14px;
+        font-weight:600;
+    }
+    
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between; 
+        font-size: 12px;
+    }
+    .footer-bottom ul{
+        display: flex;
+        justify-content: space-between; 
+        gap:20px;
+    }
+</style>
+<body>
+	<header>
+		<div class="container">
+			<ul class="menu">
+				<li><a href=""><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" class="logo"  ></a></li>
+				<li><a href="">Microsoft 365</a></li>
+				<li><a href="">Office</a></li>
+				<li><a href="">Windows</a></li>
+				<li><a href="">Поддержка</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="">Продукты Microsoft</a></li>
+				<li><a href="">Поиск &nbsp; <img src="search.png" alt="Поиск на " height=16px></a></li>
+                <li><a href="">Войти</a></li>
+				<li><a href=""><img src="signin.png" id="signin" alt="Войдите в учетную запись" height=50px></a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="main-card">
+				<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true" class="background">
+				<div class="content">
+					<h1>Разработано для жизни — сегодня и в будущем</h1>
+					<p>Следующее поколение игр. Ваши цели. Друзья и семья. С Windows 11 вы станете еще ближе к тому, что успели полюбить.</p>
+					<a href="" class="mainBtn">Проверьте, готов ли ваш ПК </a>
+				</div>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWPGs4?ver=3a6f&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true" class="cardImg">
+					<h2 class="cardHeading">Microsoft 365</h2>
+					<p class="cardText">Приложения Office премиум-класса, дополнительное облачное хранилище, продвинутые инструменты обеспечения безопасности и многое другое — все в одной удобной подписке.</p>
+					<a href="" class="cardBtn">До 6 человек ></a>
+					<a href="" class="cardBtn">Для 1 человека ></a>
+				</div>
+				<div class="card">
+					<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4rzE2?ver=aa0b&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true" class="cardImg">
+					<h2 class="cardHeading">Microsoft Edge</h2>
+					<p class="cardText">Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p>
+					<a href="" class="cardBtn">Скачать ></a>
+				</div>
+				<div class="card">
+					<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3hD2k?ver=6539&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true" class="cardImg">
+					<h2 class="cardHeading">Microsoft OneDrive</h2>
+					<p class="cardText">Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.</p>
+					<a href="" class="cardBtn">Подробнее ></a>
+				</div>
+				<div class="card">
+					<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REGxSz?ver=5bf8&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true" class="cardImg">
+					<h2 class="cardHeading">OneNote</h2>
+					<p class="cardText">Приведите свои заметки и дела в порядок.</p>
+					<a href="" class="cardBtn">Узнать больше ></a>
+				</div>
+			</div>
+</body>
+</html>
