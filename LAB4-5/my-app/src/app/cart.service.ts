@@ -12,18 +12,15 @@ export class CartService {
     this.items.push(product);
   }
 
-  // tslint:disable-next-line:typedef
   getItems(){
     return this.items;
   }
 
-  // tslint:disable-next-line:typedef
   clearCart() {
     this.items = [];
     return this.items;
   }
 
-  // tslint:disable-next-line:typedef
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
