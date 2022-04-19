@@ -13,6 +13,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
+import { CinemaComponent } from './cinema/cinema.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
     AlbumsComponent,
     AlbumDetailComponent,
     AlbumPhotosComponent,
-    TopBarComponent
+    TopBarComponent,
+    CinemaComponent
   ],
   imports: [
     BrowserModule,
