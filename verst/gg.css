@@ -1,0 +1,12 @@
+.dieselReactWrapper{
+    -webkit-font-smoothing: antialiased;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    font-family: Brutal,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    box-sizing: inherit;
+    text-size-adjust: 100%;
+}

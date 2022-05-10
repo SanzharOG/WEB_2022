@@ -1,40 +1,41 @@
-from django.http.response import HttpResponse, JsonResponse
-from api.models import Company, Vacancy
-
-
-def company_list(request):
-    vacancies = Company.objects.all()
-    vacancies_json = [company.to_json() for company in vacancies]
-    return JsonResponse(vacancies_json, safe=False)
-
-
-def company_detail(request, company_id):
-    try:
-        company = Company.objects.get(id=company_id)
-        company_json = company.to_json()
-    except Company.DoesNotExist as e:
-        return JsonResponse({'message': str(e)}, status=400)
-    if 'vacancies' in request.path:
-        vacancies_of_company = Vacancy.objects.filter(
-            company__name=company_json['name'])
-        vacancies_of_company_json = [vacancy.to_json()
-                                     for vacancy in vacancies_of_company]
-        return JsonResponse(vacancies_of_company_json, safe=False)
-    return JsonResponse(company_json)
-
-
-def vacancy_list(request):
-    if 'top_ten' in request.path:
-        vacancies = Vacancy.objects.order_by('-salary')[:10]
-    else:
-        vacancies = Vacancy.objects.all()
-    vacancies_json = [vacancy.to_json() for vacancy in vacancies]
-    return JsonResponse(vacancies_json, safe=False)
-
-
-def vacancy_detail(request, vacancy_id):
-    try:
-        vacancy = Vacancy.objects.get(id=vacancy_id)
-    except Vacancy.DoesNotExist as e:
-        return JsonResponse({'message': str(e)}, status=400)
-    return JsonResponse(vacancy.to_json())
+from   django.http   import   JsonResponse 
+from   django.shortcuts   import   render 
+from   django.views.decorators.csrf   import   csrf_exempt 
+from  .models   import   Author ,  Article 
+  
+  
+  # Create your views here. 
+from .serializers import PostSerializer 
+  
+  
+def   authorList (request): 
+    if request.method == 'GET':
+       authors   =   Author.objects.all () 
+       serializer   =   PostSerializer ( authors ,  many = True ) 
+       return   JsonResponse ( serializer.data ,  safe = False ) 
+    elif request.method == "CREATE":
+        authors.create()
+        return   JsonResponse ({ 'message':'created'},  status = 204 )
+  
+@csrf_exempt 
+def   authorDetail ( request ,  id ): 
+       try: 
+           author   =   Author.objects.get ( id = id ) 
+       except   Author.DoesNotExist as e: 
+           return   JsonResponse ({ 'message':str (e)},  status = 400 ) 
+  
+       if   request.method   ==   'GET' : 
+           serializer   =   PostSerializer ( author ) 
+           return   JsonResponse ( serializer.data ,  safe = False ) 
+       elif   request.method   ==   "UPDATE" : 
+           author.update () 
+           return   JsonResponse ({ 'message':'Updated'},  status = 204 ) 
+       elif   request.method   ==   "DELETE" : 
+           author.delete()
+           return   JsonResponse ({ 'message':'Deleted'},  status = 204 ) 
+  
+  
+def   authorByarticle ( request ,  id ): 
+       authors   =   Author.objects.filter ( article_id = id ) 
+       serializer   =   PostSerializer ( authors ,  many = True ) 
+       return   JsonResponse ( serializer.data ,  safe = False )
